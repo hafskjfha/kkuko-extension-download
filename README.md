@@ -87,6 +87,11 @@
 - [끄투코리아](https://kkutu.co.kr) 팀에게 훌륭한 게임을 제공해주셔서 감사합니다
 - Discord RPC 라이브러리 개발자들에게 감사합니다
 
+## 끄투코리아
+프로그램을 검토해주신 끄투코리아팀에게 감사합니다.
+![valid](./docs/img/Screenshot_20250820_101032_Gmail.jpg)
+![valid](./docs/img/image.png)
+
 ---
 
 ⭐ 이 프로젝트가 유용하다면 스타를 눌러주세요!
