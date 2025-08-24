@@ -1,0 +1,47 @@
+{
+  "name": "kkuko-extension-app",
+  "version": "0.1.0",
+  "description": "kkuko-extension-app",
+  "main": "packages/electron/dist/src/main.js",
+  "build": {
+    "appId": "ko.hafskjfha.rpcapp",
+    "electronVersion": "37.2.6",
+    "files": [
+      "packages/electron/dist/**",
+      "packages/renderer/dist/**",
+      "packages/electron/icon/**"
+    ],
+    "extraResources": [],
+    "directories": {
+      "buildResources": "packages/electron/icon"
+    },
+    "mac": {
+      "icon": "packages/electron/icon/mac/icon-1024.icns"
+    },
+    "win": {
+      "icon": "packages/electron/icon/win/app-icon.ico"
+    }
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter kkuko-extension-app-renderer dev\" \"wait-on http://localhost:5173 && pnpm --filter kkuko-extension-app-electron dev\"",
+    "build": "pnpm run generate-build-info && pnpm --filter kkuko-extension-app-renderer build && pnpm --filter kkuko-extension-app-electron build && electron-builder",
+    "build:win": "pnpm run generate-build-info && pnpm --filter kkuko-extension-app-renderer build && pnpm --filter kkuko-extension-app-electron build && electron-builder --win --x64",
+    "build:main": "pnpm run generate-build-info && pnpm --filter kkuko-extension-app-renderer build && pnpm --filter kkuko-extension-app-electron build",
+    "dist": "pnpm build:main && electron-builder",
+    "generate-build-info": "node scripts/generate-build-info.js",
+    "update-version": "node scripts/update-version.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^8.0.4"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0"
+  }
+}

@@ -2,6 +2,7 @@ import { InOutServerOrRoom, StartGame, EndGame, GetWord } from '../../../../../.
 
 let round = 0;
 const wordSet = new Set<string>();
+const WS_PORT = 27893;
 
 // =============================
 //  WebSocket 연결 함수
@@ -12,7 +13,7 @@ let reconnectTimeout: ReturnType<typeof setTimeout> | null = null;
 function connectWS() {
     if (socket && socket.readyState === WebSocket.OPEN) return; // 이미 연결 중이면 무시
 
-    socket = new WebSocket("ws://localhost:3001");
+    socket = new WebSocket(`ws://localhost:${WS_PORT}`);
 
     socket.addEventListener("open", () => {
         // console.log("Connected to server");
@@ -159,6 +160,9 @@ let addTimeout: ReturnType<typeof setTimeout> | null = null;
 function sendWord(word: string) {
     if (!wordSet.has(word) && word.trim()) {
         wordSet.add(word);
+        const el = document.querySelector('h5.room-head-mode');
+        const mode = el ? el.textContent.trim() : '';
+        if (mode.includes('솎솎') || mode.includes('그림') || mode.includes("OX")) return;
         const sendData: GetWord = { p_type: "g-word", data: { word } };
         sendWS(sendData);
     }

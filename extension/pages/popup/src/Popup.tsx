@@ -4,6 +4,8 @@ import { cn, ErrorDisplay, LoadingSpinner } from '@extension/ui';
 import { useState, useEffect, useRef } from 'react';
 import { Gamepad2, Server, Users, Activity } from 'lucide-react';
 
+const WS_PORT = 27893;
+
 interface GameState {
     serverNumber: number | string;
     roomNumber: null | number;
@@ -24,7 +26,7 @@ const Popup = () => {
     useEffect(() => {
         const connectWebSocket = () => {
             try {
-                const ws = new WebSocket('ws://localhost:3001/');
+                const ws = new WebSocket(`ws://localhost:${WS_PORT}/`);
                 wsRef.current = ws;
 
                 ws.onopen = () => {
