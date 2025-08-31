@@ -80,7 +80,7 @@
 
 ## 📞 연락처
 
-- **이메일**: jtw7913@example.com
+- **이메일**: jtw7913@gamil.com
 - **GitHub**: [@hafskjfha](https://github.com/hafskjfha)
 
 ## 🙏 감사의 말
