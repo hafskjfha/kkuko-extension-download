@@ -16,7 +16,7 @@ async function build() {
             format: "cjs", // CommonJS 출력
             sourcemap: false,
             minify: true,
-            external: ["electron", "better-sqlite3"],
+            external: ["electron"],
         });
 
         console.log("✅ Build complete!");

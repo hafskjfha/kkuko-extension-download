@@ -204,8 +204,7 @@ if (displayElem) {
                         // console.log({ word: node.textContent ?? '', root_type: 'ns' });
 
                     } else {
-                        const letter = letterElem?.textContent?.trim() ?? '';
-                        sendWord(letter);
+                        
                     }
                 });
             }

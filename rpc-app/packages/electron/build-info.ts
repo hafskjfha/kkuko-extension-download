@@ -1,3 +1,3 @@
 // This file is auto-generated during build
-export const buildDate = "2025-08-24T11:28:45.555Z";
-export const commitHash = "e7afa9f";
+export const buildDate = "2025-08-31T11:29:12.372Z";
+export const commitHash = "1be9782";

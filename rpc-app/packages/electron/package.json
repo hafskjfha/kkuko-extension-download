@@ -1,6 +1,6 @@
 {
   "name": "kkuko-extension-app-electron",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "dist/src/main.js",
   "scripts": {
@@ -13,10 +13,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.14.0",
   "dependencies": {
-    "better-sqlite3": "^12.2.0",
     "discord-rpc": "^4.0.1",
     "electron-is-dev": "^3.0.1",
     "electron-log": "^5.4.2",
+    "lowdb": "^7.0.1",
     "uuid": "^11.1.0",
     "ws": "^8.18.3"
   },
@@ -26,7 +26,6 @@
     "@types/ws": "^8.18.1",
     "cross-env": "^10.0.0",
     "electron": "^37.2.6",
-    "electron-rebuild": "^3.2.9",
     "esbuild": "^0.25.9",
     "glob": "^11.0.3",
     "rimraf": "^6.0.1"

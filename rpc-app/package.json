@@ -1,6 +1,6 @@
 {
   "name": "kkuko-extension-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "kkuko-extension-app",
   "main": "packages/electron/dist/src/main.js",
   "build": {
@@ -40,8 +40,5 @@
     "electron": "^37.2.6",
     "electron-builder": "^26.0.12",
     "wait-on": "^8.0.4"
-  },
-  "dependencies": {
-    "better-sqlite3": "^12.2.0"
   }
 }
