@@ -1,6 +1,6 @@
 # 끄투코리아 Discord RPC
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/yourusername/kkutu-discord-rpc/releases)
+[![Version](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/yourusername/kkutu-discord-rpc/releases)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-green.svg)](LICENSE)
 
 끄투코리아에서 게임을 플레이할 때 Discord 상태에 실시간으로 게임 정보를 표시해주는 앱입니다.
